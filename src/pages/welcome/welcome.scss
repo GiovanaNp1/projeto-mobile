@@ -1,0 +1,39 @@
+page-welcome {
+    .content {
+        background-color: #D9A3D3;  
+        background-image: url('../../assets/Ellipse\ 1.png'),  url('../../assets/Ellipse\ 2.png');
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position-y: bottom, top;
+        background-position-x: left, right;
+        text-align: center;
+    }
+    .toolbar-title{
+        color: white;
+        font-size: 20px;
+    }
+    
+}
+.button-md{
+    box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.button-ios{
+    box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.btn-cadastrar{
+    color: #D0004B;
+}
+
+#icon-principal{
+    margin-top: 30px;
+}
+
+#icon-apple{
+    height: 100%;
+}

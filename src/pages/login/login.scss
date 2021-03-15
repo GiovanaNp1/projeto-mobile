@@ -1,0 +1,53 @@
+page-login {
+    .content {
+        background-color: #D9A3D3;  
+        background-image: url('../../assets/Ellipse\ 1.png'),  url('../../assets/Ellipse\ 2.png');
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position-y: bottom, top;
+        background-position-x: left, right;
+        text-align: center;
+    }
+    .toolbar-title{
+        color: white;
+        font-size: 20px;
+        margin-bottom: 0.625rem;
+        margin-top: 1.875rem;
+    }
+    
+}
+.button-md{
+    box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.btn-cadastrar{
+    color: #D0004B;
+}
+
+#icon-principal{
+    margin-top: 30px;
+}
+
+.card{
+    border-radius: 15px;
+    padding: 10px;
+}
+
+img{
+    height: 70px;
+}
+
+.item-ios{
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 7px;
+}
+
+.ion-item{
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 7px;
+}
+
