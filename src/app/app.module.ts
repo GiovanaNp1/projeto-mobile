@@ -1,7 +1,11 @@
 import { NgModule, ErrorHandler, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { MyApp } from './app.component';
+
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -19,6 +23,7 @@ import {
   GoogleLoginProvider,
   FacebookLoginProvider,
 } from "angular5-social-login";
+import { DashboardPage } from '../pages/dashboard/dashboard';
 
 export function getAuthServiceConfigs() {
   let config = new AuthServiceConfig(
@@ -36,12 +41,22 @@ export function getAuthServiceConfigs() {
   return config;
 }
 
+export const firebaseConfig = {
+	apiKey: "AIzaSyBa30ko-Xnjj2T_MoTRwxRoTrJnb_5xESM",
+	authDomain: "projeto-1-c5ba5.firebaseapp.com",
+	databaseURL: "https://projeto-1-c5ba5-default-rtdb.firebaseio.com",
+	projectId: "projeto-1-c5ba5",
+	storageBucket: "projeto-1-c5ba5.appspot.com",
+	messagingSenderId: "325541971390"
+}
+
 @NgModule({
   declarations: [
     MyApp,
     AboutPage,
     ContactPage,
     HomePage,
+    DashboardPage,
     TabsPage,
     LoginPage,
     WelcomePage
@@ -50,6 +65,9 @@ export function getAuthServiceConfigs() {
     BrowserModule,
     SocialLoginModule,
     IonicModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -57,6 +75,7 @@ export function getAuthServiceConfigs() {
     MyApp,
     AboutPage,
     ContactPage,
+    DashboardPage,
     HomePage,
     TabsPage,
     LoginPage,
